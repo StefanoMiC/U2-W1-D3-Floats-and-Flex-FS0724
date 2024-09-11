@@ -1,0 +1,99 @@
+h2,
+h3 {
+  margin-top: 2rem;
+  text-align: center;
+}
+h2 {
+  border-bottom: 2px solid #ebebeb;
+}
+
+.box {
+  color: white;
+  font-weight: 600;
+  font-size: 30px;
+  position: relative;
+}
+
+.box span {
+  position: absolute;
+  width: max-content;
+  height: max-content;
+  inset: 0;
+  margin: auto;
+}
+
+.container {
+  display: flex;
+  margin-top: 0;
+}
+.container.n2 {
+  flex-direction: row-reverse;
+}
+
+/* .container.n3,
+.container.n4,
+.container.n5,
+.container.n7,
+.container.n8,
+.container.n9 {
+  min-height: 50vh;
+} */
+.container:where(.n3, .n4, .n5, .n7, .n8, .n9, .n10) {
+  min-height: 50vh;
+}
+
+.container.n3 {
+  flex-direction: column;
+}
+
+.container.n4 {
+  flex-direction: column-reverse;
+}
+
+.container.n5 {
+  flex-wrap: wrap;
+
+  /* align content ha effetto SOLO se abbiamo usato flex-wrap e quando gli elementi si stanno effettivamente posizionando su più righe */
+  align-content: center;
+}
+
+.container.n6 {
+  /* MAIN AXIS è X (per via del flex-direction: row; di default) */
+  /* justify-content agisce SEMPRE sulla MAIN-AXIS (direzione principale) */
+  justify-content: center;
+}
+
+.container.n7 {
+  flex-direction: column;
+  /* MAIN AXIS sarà Y (verticale) */
+  /* justify-content agisce SEMPRE sulla MAIN-AXIS (direzione principale) */
+  justify-content: flex-end;
+}
+
+.container.n8 {
+  align-items: center;
+}
+
+.container.n9 {
+  flex-direction: column;
+  align-items: center;
+}
+
+.container.n10 {
+  align-items: baseline;
+  justify-content: center;
+  padding-block: 7rem;
+}
+
+.container.n10 .box {
+  font-size: inherit;
+  font-weight: initial;
+  color: inherit;
+  width: 200px;
+  height: initial;
+}
+
+.container.n10 .box img {
+  max-width: 100%;
+  display: block;
+}
